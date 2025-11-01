@@ -143,9 +143,8 @@ def start_video_object_detection(video: str):
             fps = 25.0
 
         # Подготовка записи выходного видео
-        fourcc = cv2.VideoWriter_fourcc(*'XVID') 
-        out = cv2.VideoWriter("output.avi", fourcc, fps, (frame_width, frame_height))
-
+        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        out = cv2.VideoWriter("output.mp4", fourcc, fps, (frame_width, frame_height))
         print("[INFO] Нажмите 'q' для выхода или Ctrl+C для прерывания.")
 
         while True:
