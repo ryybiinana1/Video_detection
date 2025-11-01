@@ -7,12 +7,12 @@
 2) Установить зависимости `run libraries.bat` or `pip install -r requirements.txt`
 3) Скачать предобученные веса моделит https://github.com/AlexeyAB/darknet/releases yolov4-tiny.weights
 4) Запуск программы `python main.py`
-5) 'Path to video (or URL):' - путь к видеофайлу
-6) 'What we are looking for:' - классы для разметки (список классов можно посмотреть в coco.names.txt)
+5) `Path to video (or URL):` - путь к видеофайлу
+6) `What we are looking for:` - классы для разметки (список классов можно посмотреть в coco.names.txt)
 
 ## Результат
-'Path to video (or URL): crowd.mp4'
-'What we are looking for: person'
+`Path to video (or URL): crowd.mp4
+What we are looking for: person`
 
 ![crowd](https://github.com/user-attachments/assets/4637fe34-c5ec-4298-8000-4164b5759852)
 ![output](https://github.com/user-attachments/assets/836fa257-cb4f-4c89-a2ea-de296d1367b3)
