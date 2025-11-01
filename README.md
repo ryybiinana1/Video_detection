@@ -5,7 +5,7 @@
 ## Установка
 1) Выполнить клонирование репозитория на свой компьютер `git clone https://github.com/ryybiinana1/Video_detection.git`
 2) Установить зависимости `run libraries.bat` or `pip install -r requirements.txt`
-3) Скачать предобученные веса моделит https://github.com/AlexeyAB/darknet/releases yolov4-tiny.weights
+3) Скачать предобученные веса модели https://github.com/AlexeyAB/darknet/releases yolov4-tiny.weights
 4) Запуск программы `python main.py`
 5) `Path to video (or URL):` - путь к видеофайлу
 6) `What we are looking for:` - классы для разметки (список классов можно посмотреть в coco.names.txt)
