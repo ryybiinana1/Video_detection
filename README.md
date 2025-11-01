@@ -2,9 +2,34 @@
 
 **Детекция людей** на видео с использованием модели **YOLOv4-tiny** и библиотеки **OpenCV**.  
 
-## How to install
-1) Выполнить клонирование репозитория на свой компьютер git clone https://github.com/ryybiinana1/Video_detection.git
-2) Установить зависимости run libraries.bat or pip install -r requirements.txt
-3) Скачать предобученные веса модели
-4) Запуск программы python main.py
+## Установка
+1) Выполнить клонирование репозитория на свой компьютер `git clone https://github.com/ryybiinana1/Video_detection.git`
+2) Установить зависимости `run libraries.bat` or `pip install -r requirements.txt`
+3) Скачать предобученные веса моделит https://github.com/AlexeyAB/darknet/releases yolov4-tiny.weights
+4) Запуск программы `python main.py`
+5) 'Path to video (or URL):' - путь к видеофайлу
+6) 'What we are looking for:' - классы для разметки (список классов можно посмотреть в coco.names.txt)
 
+## Результат
+'Path to video (or URL): crowd.mp4
+What we are looking for: person'
+
+![crowd](https://github.com/user-attachments/assets/4637fe34-c5ec-4298-8000-4164b5759852)
+![output](https://github.com/user-attachments/assets/836fa257-cb4f-4c89-a2ea-de296d1367b3)
+
+## Анализ качества распознавания и пути улучшения
+### Качество распознавания
+В ходе детекции получены следующие результаты:
+- Модель уверенно распознает людей в средней части экрана
+- Работа в режиме реального времени и высокая скорость обработки кадров
+
+### Ограничения
+- При частичном перекрытии модель пропускает некоторые объекты
+- На дальных расстояниях падает уверенность детекции
+- Иногда *боксы моргают*, то есть объекты то выделены, то нет
+
+### Пути улучшения
+1. **Использовать более точную модель**, например:
+   - `YOLOv4` или `YOLOv5s`
+2. **Применить постобработку и трекинг**
+3. **Дообучить модель (transfer learning)** на специфичных данных (например, сцены с плотными толпами или с низким светом).
